@@ -1,0 +1,1 @@
+console.log("Kanban do TCC carregado com sucesso!");

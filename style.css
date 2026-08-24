@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f6f3;
+    color: #3d3028;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 3px solid #a85d32;
+    padding: 35px 0;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    color: #6f3f24;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #766b64;
+    font-size: 16px;
+}
+
+.kanban {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+.coluna {
+    background-color: #eeeae6;
+    border-radius: 12px;
+    padding: 15px;
+    min-height: 400px;
+}
+
+.titulo-coluna {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.titulo-coluna h2 {
+    font-size: 18px;
+}
+
+.titulo-coluna span {
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pendente {
+    background-color: #ead8c9;
+    color: #754321;
+}
+
+.andamento {
+    background-color: #e8c9a8;
+    color: #74451f;
+}
+
+.concluido {
+    background-color: #d9ded8;
+    color: #3f5744;
+}
+
+.tarefas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tarefa {
+    background-color: #ffffff;
+    border-radius: 9px;
+    padding: 17px;
+    box-shadow: 0 2px 6px rgba(70, 50, 35, 0.08);
+    border-left: 4px solid #b56b3c;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarefa:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(70, 50, 35, 0.15);
+}
+
+.tarefa h3 {
+    color: #4b362b;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.tarefa p {
+    color: #77706b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.destaque {
+    border-left-color: #8f4d28;
+}
+
+.vazio {
+    text-align: center;
+    color: #88817c;
+    padding-top: 40px;
+}
+
+.vazio p {
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    color: #8a817a;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+    .kanban {
+        grid-template-columns: 1fr;
+    }
+
+    .coluna {
+        min-height: auto;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 94%;
+    }
+
+    header {
+        padding: 25px 0;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .tarefa h3 {
+        font-size: 15px;
+    }
+}
