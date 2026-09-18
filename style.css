@@ -1,86 +1,132 @@
-<!DOCTYPE html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanban - PetFinder</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #ffffff;
+color: #000000;
+}
 
-<body>
+header {
+text-align: center;
+padding: 0 0 15px 0;
+}
+
+header h1 {
+color: #ff1111;
+font-size: 28px;
+font-weight: bold;
+}
+
+.kanban {
+width: 87%;
+max-width: 625px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 12px;
+align-items: stretch;
+}
+
+.coluna {
+background-color: #e5e5e5;
+border-radius: 20px;
+min-height: 390px;
+padding: 10px 8px;
+box-shadow: 3px 4px 0px #eeeeee;
+}
+
+.titulo-coluna {
+background-color: #000000;
+color: #ffffff;
+border-radius: 30px;
+text-align: center;
+padding: 9px 5px;
+margin-bottom: 16px;
+}
+
+.titulo-coluna h2 {
+font-size: 17px;
+}
+
+.tarefas {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 8px;
+align-items: start;
+padding: 0 1px;
+}
+
+.tarefa {
+background-color: #fff33b;
+min-height: 84px;
+padding: 12px 7px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+box-shadow: 3px 4px 0px #d6d6d6;
+}
+
+.tarefa h3 {
+font-family: "Comic Sans MS", "Arial", sans-serif;
+font-size: 13px;
+line-height: 1.25;
+font-weight: bold;
+}
+
+.tarefa:nth-child(3) {
+grid-column: 1;
+}
+
+footer {
+width: 100%;
+margin-top: 18px;
+padding-left: 5px;
+font-size: 9px;
+color: #333333;
+}
+
+@media (max-width: 650px) {
+.kanban {
+width: 95%;
+gap: 8px;
+}
 
 ```
-<header>
-    <h1>Kanban: nossa gestão de trabalho</h1>
-</header>
+.coluna {
+    min-height: 350px;
+    border-radius: 15px;
+}
 
-<main class="kanban">
+.titulo-coluna h2 {
+    font-size: 14px;
+}
 
-    <section class="coluna">
-        <div class="titulo-coluna">
-            <h2>Pendente</h2>
-        </div>
-
-        <div class="tarefas">
-
-            <div class="tarefa">
-                <h3>Ajustes<br>e melhorias<br>do MVP</h3>
-            </div>
-
-            <div class="tarefa">
-                <h3>Refinamento<br>do MVP</h3>
-            </div>
-
-            <div class="tarefa">
-                <h3>Avaliação<br>final<br>do MVP</h3>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="coluna">
-        <div class="titulo-coluna">
-            <h2>Em andamento</h2>
-        </div>
-
-        <div class="tarefas">
-
-            <div class="tarefa">
-                <h3>Adoção<br>de práticas<br>inovadoras<br>no MVP</h3>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="coluna">
-        <div class="titulo-coluna">
-            <h2>Concluído</h2>
-        </div>
-
-        <div class="tarefas">
-
-            <div class="tarefa">
-                <h3>Coleta<br>de feedback<br>dos usuários</h3>
-            </div>
-
-            <div class="tarefa">
-                <h3>Desenvolvimento<br>do MVP</h3>
-            </div>
-
-            <div class="tarefa">
-                <h3>Adoção<br>de práticas<br>sustentáveis<br>no MVP</h3>
-            </div>
-
-        </div>
-    </section>
-
-</main>
-
-<footer>
-    Produzido pela SEDUC-SP.
-</footer>
+.tarefa h3 {
+    font-size: 11px;
+}
 ```
 
-</body>
-</html>
+}
+
+@media (max-width: 500px) {
+.kanban {
+grid-template-columns: 1fr;
+width: 90%;
+}
+
+```
+.coluna {
+    min-height: auto;
+}
+
+header h1 {
+    font-size: 23px;
+}
+```
+
+}
