@@ -1,172 +1,86 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f6f3;
-    color: #3d3028;
-}
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban - PetFinder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+<body>
 
-header {
-    background-color: #ffffff;
-    border-bottom: 3px solid #a85d32;
-    padding: 35px 0;
-    margin-bottom: 35px;
-}
+```
+<header>
+    <h1>Kanban: nossa gestão de trabalho</h1>
+</header>
 
-header h1 {
-    color: #6f3f24;
-    font-size: 32px;
-    margin-bottom: 8px;
-}
+<main class="kanban">
 
-header p {
-    color: #766b64;
-    font-size: 16px;
-}
+    <section class="coluna">
+        <div class="titulo-coluna">
+            <h2>Pendente</h2>
+        </div>
 
-.kanban {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    align-items: start;
-}
+        <div class="tarefas">
 
-.coluna {
-    background-color: #eeeae6;
-    border-radius: 12px;
-    padding: 15px;
-    min-height: 400px;
-}
+            <div class="tarefa">
+                <h3>Ajustes<br>e melhorias<br>do MVP</h3>
+            </div>
 
-.titulo-coluna {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 14px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
+            <div class="tarefa">
+                <h3>Refinamento<br>do MVP</h3>
+            </div>
 
-.titulo-coluna h2 {
-    font-size: 18px;
-}
+            <div class="tarefa">
+                <h3>Avaliação<br>final<br>do MVP</h3>
+            </div>
 
-.titulo-coluna span {
-    background-color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
-}
+        </div>
+    </section>
 
-.pendente {
-    background-color: #ead8c9;
-    color: #754321;
-}
+    <section class="coluna">
+        <div class="titulo-coluna">
+            <h2>Em andamento</h2>
+        </div>
 
-.andamento {
-    background-color: #e8c9a8;
-    color: #74451f;
-}
+        <div class="tarefas">
 
-.concluido {
-    background-color: #d9ded8;
-    color: #3f5744;
-}
+            <div class="tarefa">
+                <h3>Adoção<br>de práticas<br>inovadoras<br>no MVP</h3>
+            </div>
 
-.tarefas {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
+        </div>
+    </section>
 
-.tarefa {
-    background-color: #ffffff;
-    border-radius: 9px;
-    padding: 17px;
-    box-shadow: 0 2px 6px rgba(70, 50, 35, 0.08);
-    border-left: 4px solid #b56b3c;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
+    <section class="coluna">
+        <div class="titulo-coluna">
+            <h2>Concluído</h2>
+        </div>
 
-.tarefa:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 12px rgba(70, 50, 35, 0.15);
-}
+        <div class="tarefas">
 
-.tarefa h3 {
-    color: #4b362b;
-    font-size: 16px;
-    line-height: 1.4;
-    margin-bottom: 8px;
-}
+            <div class="tarefa">
+                <h3>Coleta<br>de feedback<br>dos usuários</h3>
+            </div>
 
-.tarefa p {
-    color: #77706b;
-    font-size: 13px;
-    line-height: 1.5;
-}
+            <div class="tarefa">
+                <h3>Desenvolvimento<br>do MVP</h3>
+            </div>
 
-.destaque {
-    border-left-color: #8f4d28;
-}
+            <div class="tarefa">
+                <h3>Adoção<br>de práticas<br>sustentáveis<br>no MVP</h3>
+            </div>
 
-.vazio {
-    text-align: center;
-    color: #88817c;
-    padding-top: 40px;
-}
+        </div>
+    </section>
 
-.vazio p {
-    font-size: 14px;
-}
+</main>
 
-footer {
-    text-align: center;
-    padding: 30px;
-    margin-top: 40px;
-    color: #8a817a;
-    font-size: 13px;
-}
+<footer>
+    Produzido pela SEDUC-SP.
+</footer>
+```
 
-@media (max-width: 900px) {
-    .kanban {
-        grid-template-columns: 1fr;
-    }
-
-    .coluna {
-        min-height: auto;
-    }
-
-    header h1 {
-        font-size: 27px;
-    }
-}
-
-@media (max-width: 500px) {
-    .container {
-        width: 94%;
-    }
-
-    header {
-        padding: 25px 0;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    .tarefa h3 {
-        font-size: 15px;
-    }
-}
+</body>
+</html>
